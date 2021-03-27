@@ -131,8 +131,8 @@ const promptInternInfo  = () => {
       },
       {
             type: "input",
-            message: "What is the Intern's GitHub username",
-            name: "github",
+            message: "What is the Intern's school name",
+            name: "school",
       }
 ])
 
@@ -140,7 +140,7 @@ const promptInternInfo  = () => {
 //intern constructor
 .then ((promptInternInfo) => {
       const {name, id, email, github} = internInfo
-            const Intern = new Intern(name, id, email, github)
+            const Intern = new Intern(name, id, email, school)
             team.push(intern);
             nextOption()
             //use nextOption to go to the next prompt???
