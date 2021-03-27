@@ -103,9 +103,9 @@ const promptEngineerInfo  = () => {
 //engineer constructor
 
 .then ((engineerInfo) => {
-      const {name, id, email, officeNumber} = mangerInfo
-            const Manager = new Manger(name, id, email, officeNumber)
-            team.push(manager);
+      const {name, id, email, github} = mangerInfo
+            const Engineer = new Engineer(name, id, email, github)
+            team.push(engineer);
             nextOption()
             //use nextOption to go to the next prompt???
 }
