@@ -1,4 +1,3 @@
-//Require modules const fs = require('fs');
 const inquirer = require('inquirer');
 const fs = require ('fs');
 const { type } = require('node:os');
@@ -48,6 +47,7 @@ const ManagerInfo = () => {
             const Manager = new Manger(name, id, email, officeNumber)
             team.push(manager);
             nextOption()
+            //use nextOption to go to the next prompt???
     
 
 
@@ -59,9 +59,58 @@ const employeeType = () => {
             message:"What team member would you like to add next?",
             choices: ["Engineer", "Intern"],
             name: "employeeType"
-      }])
+      },
+])
 
-//
+//switch case to prompt next option to user based on input
+// syntax error? REVIEW
+      .then((data) => {
+            swtich (data.employeeType) {
+                  case "Engineer":
+                        promptEngineerInfo()
+                        break;
+                  case "Intern":
+                        promptInternInfo()
+                        break;
+      )};
+    
+      
 
+//engineer prompt
+const promptEngineerInfo  = () => {
+      inquirer .prompt ([ {
+            type:"input",
+            message:"What is the Engineer's name?",
+            name: "name",
+       },
+       {
+            type: "input",
+            message: "What is the Engineer's employee ID?",
+            name: "id",
+      },
+      {     
+            type: "input",
+            message: "What is the Engineer's email?",
+            name: "email",
 
+      },
+      {
+            type: "input",
+            message: "What is the Engineer's GitHub username",
+            name: "github",
+      }
+])
+//engineer constructor
+
+.then ((engineerInfo) => {
+      const {name, id, email, officeNumber} = mangerInfo
+            const Manager = new Manger(name, id, email, officeNumber)
+            team.push(manager);
+            nextOption()
+            //use nextOption to go to the next prompt???
 }
+)};
+
+//intern prompt
+
+//intern constructor
