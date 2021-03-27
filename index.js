@@ -146,3 +146,7 @@ const promptInternInfo  = () => {
             //use nextOption to go to the next prompt???
 }
 )};
+
+//render html page
+fs.writeFileSync("Team Profile", generateTeamProfile, (err) =>
+      err ? console.log(err) : console.log("Success!"))
