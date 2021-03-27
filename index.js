@@ -102,7 +102,7 @@ const promptEngineerInfo  = () => {
 ])
 //engineer constructor
 
-.then ((engineerInfo) => {
+.then ((promptEngineerInfo) => {
       const {name, id, email, github} = mangerInfo
             const Engineer = new Engineer(name, id, email, github)
             team.push(engineer);
@@ -112,5 +112,37 @@ const promptEngineerInfo  = () => {
 )};
 
 //intern prompt
+const promptInternInfo  = () => {
+      inquirer .prompt ([ {
+            type:"input",
+            message:"What is the Intern's name?",
+            name: "name",
+       },
+       {
+            type: "input",
+            message: "What is the Intern's employee ID?",
+            name: "id",
+      },
+      {     
+            type: "input",
+            message: "What is the Intern's email?",
+            name: "email",
+
+      },
+      {
+            type: "input",
+            message: "What is the Intern's GitHub username",
+            name: "github",
+      }
+])
+
 
 //intern constructor
+.then ((promptInternInfo) => {
+      const {name, id, email, github} = internInfo
+            const Intern = new Intern(name, id, email, github)
+            team.push(intern);
+            nextOption()
+            //use nextOption to go to the next prompt???
+}
+)};
