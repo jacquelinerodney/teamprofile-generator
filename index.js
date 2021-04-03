@@ -46,7 +46,7 @@ const ManagerInfo = () => {
             const {name, id, email, officeNumber} = mangerInfo
             const Manager = new Manger(name, id, email, officeNumber)
             team.push(manager);
-            nextOption()
+            
             //use nextOption to go to the next prompt???
     
 
@@ -65,14 +65,15 @@ const employeeType = () => {
 //switch case to prompt next option to user based on input
 // syntax error? REVIEW
       .then((data) => {
-            swtich (data.employeeType) {
+            switch (data.employeeType) {
                   case "Engineer":
                         promptEngineerInfo()
                         break;
                   case "Intern":
                         promptInternInfo()
                         break;
-      )};
+            }
+      });
     
       
 
@@ -106,7 +107,7 @@ const promptEngineerInfo  = () => {
       const {name, id, email, github} = mangerInfo
             const Engineer = new Engineer(name, id, email, github)
             team.push(engineer);
-            nextOption()
+           
             //use nextOption to go to the next prompt???
 }
 )};
@@ -142,7 +143,7 @@ const promptInternInfo  = () => {
       const {name, id, email, github} = internInfo
             const Intern = new Intern(name, id, email, school)
             team.push(intern);
-            nextOption()
+           
             //use nextOption to go to the next prompt???
 }
 )};
