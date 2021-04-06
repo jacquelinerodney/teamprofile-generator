@@ -78,7 +78,7 @@ html.push(team
     return html.join("");
 
 //export team
-module.exports = team => {}
+module.exports = team => {
 
 return `
 
@@ -111,8 +111,8 @@ return `
         </div>
 </body>
 <html>
-    ;
-`
+    `;
+}; 
 
 
 
