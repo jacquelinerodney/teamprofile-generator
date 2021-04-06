@@ -71,6 +71,11 @@ html.push(team
     .map(engineer => generateEngineer(engineer))
     .join("")
     );
+html.push(team 
+    .filter(employee => employee.getRole () == "Intern")
+    .map(intern => generateIntern(intern))
+    .join("")
+    );
 
 }
 
