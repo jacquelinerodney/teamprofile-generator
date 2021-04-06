@@ -77,10 +77,11 @@ html.push(team
     .join("")
     );
 
-}
 
 
     return html.join("");
+
+}
 
 //export team
 module.exports = team => {
