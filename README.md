@@ -5,9 +5,9 @@
 
 # Table of Contents
 Installation
-Usage
+Usage 
 License
-Contributing
+Contributions
 Questions
 Tests
 
