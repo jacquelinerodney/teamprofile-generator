@@ -8,14 +8,14 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "test"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jacquelinerodney/teamprofile-generator.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/jacquelinerodney/teamprofile-generator/issues"
   },

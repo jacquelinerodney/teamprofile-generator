@@ -1,4 +1,16 @@
 body {
-    background-color: yellow ;
+    background-color: #ffcd8c ;
 
 }
+.card-body {
+    background-color: #b6f7fc ;
+  }
+  
+  .card-header {
+    background-color: #d7f15e;
+  }
+  
+  #jumbo {
+    background-color: #56e4d8;
+  }
+  
