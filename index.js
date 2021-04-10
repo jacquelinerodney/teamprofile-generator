@@ -1,6 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require ('fs');
-const { type } = require('node:os');
+const generateHTML = require("./src/template.js");
+
 const Manager = require (".lib/manager");
 const Engineer = require (".lib/engineer");
 const Intern = require ("./lib/intern");
@@ -40,15 +41,15 @@ const ManagerInfo = () => {
             name: "officeNumber",
        }
       ])
-};
+
       //Manager Constructor
-      
+           .then((managerData) => {
             const {name, id, email, officeNumber} = mangerInfo
             const Manager = new Manger(name, id, email, officeNumber)
             team.push(manager);
-            
-            //use nextOption to go to the next prompt???
-    
+           })
+           
+      }
 
 
 //inqurier prompt for employee type input
@@ -63,7 +64,6 @@ const employeeType = () => {
 ])
 
 //switch case to prompt next option to user based on input
-// syntax error? REVIEW
       .then((data) => {
             switch (data.employeeType) {
                   case "Engineer":
@@ -108,7 +108,6 @@ const promptEngineerInfo  = () => {
             const Engineer = new Engineer(name, id, email, github)
             team.push(engineer);
            
-            //use nextOption to go to the next prompt???
 }
 )};
 
@@ -144,10 +143,12 @@ const promptInternInfo  = () => {
             const Intern = new Intern(name, id, email, school)
             team.push(intern);
            
-            //use nextOption to go to the next prompt???
+           
 }
 )};
 
 //render html page
-fs.writeFileSync("Team Profile", generateTeamProfile, (err) =>
-      err ? console.log(err) : console.log("Success!"))
+fs.writeFileSync("./dist/team.html", generateHTML(team), "UTF-8")
+console.log(`Success!`);
+
+}
